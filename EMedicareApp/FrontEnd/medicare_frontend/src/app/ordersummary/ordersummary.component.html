@@ -1,0 +1,26 @@
+<div>
+    <h5>ORDER SUMMARY</h5>
+    <span *ngFor="let r of items">
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>Medicine ID</th>
+                    <th>Medicine Name</th>&nbsp;
+                    <th>Price</th>&nbsp;
+                    
+                </tr>
+                <br>
+                <tr>
+                    <td>{{r.medid}}</td>
+                    <td>{{r.medname}}</td>&nbsp;
+                    <td>{{r.price}}</td>&nbsp;
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </span>
+    <div align="left">
+        <h4>Total Amount:&nbsp;&nbsp;Rs. {{bill}}</h4><br>
+        </div>
+<a routerLink="/payment">PROCEED TO PAYMENT</a>
+</div>

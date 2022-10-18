@@ -1,0 +1,24 @@
+<div>
+    <h5>CART</h5>
+    <span *ngFor="let r of items">
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>Medicine ID</th>
+                    <th>Medicine Name</th>&nbsp;
+                    <th>Price</th>&nbsp;
+                </tr>
+                <br>
+                <tr>
+                    <td>{{r.medid}}</td>
+                    <td>{{r.medname}}</td>&nbsp;
+                    <td>{{r.price}}</td>&nbsp;
+                    <td><input type="button" class="btn btn-danger" value="REMOVE ITEM" (click)="deleteItem(r.medid,r.email)"/>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </span>
+    <td><a routerLink="/ordersummary" class="link-success" (click)="bill(email)">VIEW ORDER SUMMARY</a>
+</div>
+
